@@ -100,7 +100,7 @@ const clean = () => {
 }
 
 const svgSprites = () => {
-    return src('./src/images/**.svg')
+    return src('./src/images/icon_svg/*.svg')
         .pipe(svgSprite({
             mode: {
                 stack: {

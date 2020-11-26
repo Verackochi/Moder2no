@@ -106,20 +106,25 @@
                 </div>
             </div>
         </section>
+        <!--секция с товаром-->
         <section class="products">
+            <!--контейекр без границ-->
             <div class="container--fluid">
+                <!--заголовок-->
                 <h2 class="products__title title--h2">
                     Let’s Check Out Our Newest Release Prodcuts
                 </h2>
+                <!--список ссылок на категории-->
                 <ul class="products__category j-center">
+                    <!--ссылка на категория-->
                     <li class="products__category-item">
-                        <a href="" class="products__category-link link--active">All</a>
+                        <a href="" class="products__category-link link--active" data-filter="all">All</a>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link ">WordPress</a>
+                        <a href="" class="products__category-link " data-filter="WordPressPlugin">WordPress</a>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link ">Joomla</a>
+                        <a href="" class="products__category-link " data-filter="JoomlaPlugin">Joomla</a>
                     </li>
                     <li class="products__category-item">
                         <a href="" class="products__category-link ">Plugins</a>
@@ -132,7 +137,9 @@
                     </li>
                 </ul>
                 <div class="products__cart cart d-spacebeetwen">
-                    <article class="cart__info cart__info--top">
+                    <!--Карточка товара data-cat:"метка категории"-->
+                    <!--карточка #1-->
+                    <article class="cart__info cart__info--top" data-cat:="SiteTemplate">
                         <a href="#" class="cart__info-link">
                             <img src="images/products images/products__image_1.jpg" alt="Responsive Mobile APP"
                                 class="cart__info-image">
@@ -150,7 +157,8 @@
                         </div>
                         <div class="cart__theme theme d-spacebeetwen">
                             <a href="#" class="theme__author-link ">
-                                <img src="images/user_avatar/test_avatar.jpg" alt="" class="theme__author-link--img">
+                                <img src="images/user_avatar/test_avatar.jpg" alt="SiteTemplate"
+                                    class="theme__author-link--img">
                                 <span class="theme__author-link--name">Radiustheme</span>
                             </a>
                             <div class="theme__raiting">
@@ -161,26 +169,34 @@
                         </div>
 
                     </article>
-                    <article class="cart__info cart__info--top">
+                    <!--карточка #2-->
+                    <article class="cart__info cart__info--top" data-cat:="WordPressPlugin">
+                        <!--блок с svg обозначает топовые карточки-->
+                        <div class="popular">
+                            <svg class="bolt">
+                                <use xlink: href="images/svg/stack/sprite.svg#bolt1"></use>
+                            </svg>
+                        </div>
                         <a href="#" class="cart__info-link">
-                            <img src="images/products images/products__image_1.jpg" alt="Responsive Mobile APP"
+                            <img src="images/products images/products__image_2.jpg" alt="Responsive Mobile APP"
                                 class="cart__info-image">
                         </a>
                         <div class="cart__info-block block d-spacebeetwen">
                             <div class="block__text">
                                 <h4 class="block__text-title">
-                                    Responsive Mobile APP
+                                    The Post Grid Pro
                                 </h4>
                                 <p class="block__text-category">
-                                    Site Template
+                                    WordPress Plugin
                                 </p>
                             </div>
-                            <p class="block__price">$19</p>
+                            <p class="block__price">$15</p>
                         </div>
                         <div class="cart__theme theme d-spacebeetwen">
                             <a href="#" class="theme__author-link ">
-                                <img src="images/user_avatar/test_avatar.jpg" alt="" class="theme__author-link--img">
-                                <span class="theme__author-link--name">Radiustheme</span>
+                                <img src="images/user_avatar/test_avatar.jpg" alt="author"
+                                    class="theme__author-link--img">
+                                <span class="theme__author-link--name">PsdBosS</span>
                             </a>
                             <div class="theme__raiting">
                                 <div class="my-rating">
@@ -189,7 +205,208 @@
                             </div>
                         </div>
                     </article>
+                    <!--карточка #3-->
+                    <article class="cart__info cart__info--top" data-cat:="WordPressPlugin">
+                        <a href="#" class="cart__info-link">
+                            <img src="images/products images/products__image_3.jpg" alt="Responsive Mobile APP"
+                                class="cart__info-image">
+                        </a>
+                        <div class="cart__info-block block d-spacebeetwen">
+                            <div class="block__text">
+                                <h4 class="block__text-title">
+                                    Food Menu
+                                </h4>
+                                <p class="block__text-category">
+                                    WordPress Plugin
+                                </p>
+                            </div>
+                            <p class="block__price">$20</p>
+                        </div>
+                        <div class="cart__theme theme d-spacebeetwen">
+                            <a href="#" class="theme__author-link ">
+                                <img src="images/user_avatar/test_avatar.jpg" alt="author"
+                                    class="theme__author-link--img">
+                                <span class="theme__author-link--name">Manilip</span>
+                            </a>
+                            <div class="theme__raiting">
+                                <div class="my-rating">
+                                    <span class="theme__reviews">(05)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--карточка #4-->
+                    <article class="cart__info cart__info--top" data-cat:="PsdTemplate">
+                        <a href="#" class="cart__info-link">
+                            <img src="images/products images/products__image_4.jpg" alt=" Imac Mockup"
+                                class="cart__info-image">
+                        </a>
+                        <div class="cart__info-block block d-spacebeetwen">
+                            <div class="block__text">
+                                <h4 class="block__text-title">
+                                    Imac Mockup
+                                </h4>
+                                <p class="block__text-category">
+                                    Psd Template
+                                </p>
+                            </div>
+                            <p class="block__price">$12</p>
+                        </div>
+                        <div class="cart__theme theme d-spacebeetwen">
+                            <a href="#" class="theme__author-link ">
+                                <img src="images/user_avatar/test_avatar.jpg" alt="author"
+                                    class="theme__author-link--img">
+                                <span class="theme__author-link--name">Lolypop</span>
+                            </a>
+                            <div class="theme__raiting">
+                                <div class="my-rating">
+                                    <span class="theme__reviews">(05)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--карточка #5-->
+                    <article class="cart__info cart__info--top" data-cat:="JoomlaTemplate">
+                        <a href="#" class="cart__info-link">
+                            <img src="images/products images/products__image_5.jpg" alt="Responsive Mobile APP"
+                                class="cart__info-image">
+                        </a>
+                        <div class="cart__info-block block d-spacebeetwen">
+                            <div class="block__text">
+                                <h4 class="block__text-title">
+                                    Gymedge
+                                </h4>
+                                <p class="block__text-category">
+                                    Joomla Template
+                                </p>
+                            </div>
+                            <p class="block__price">$45</p>
+                        </div>
+                        <div class="cart__theme theme d-spacebeetwen">
+                            <a href="#" class="theme__author-link ">
+                                <img src="images/user_avatar/test_avatar.jpg" alt="author"
+                                    class="theme__author-link--img">
+                                <span class="theme__author-link--name">Micrsof</span>
+                            </a>
+                            <div class="theme__raiting">
+                                <div class="my-rating">
+                                    <span class="theme__reviews">(05)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--Карточка #6-->
+                    <article class="cart__info cart__info--top" data-cat:="WordPressPlugin">
+                        <a href="#" class="cart__info-link">
+                            <img src="images/products images/products__image_6.jpg" alt="The Post Grid Pro"
+                                class="cart__info-image">
+                        </a>
+                        <div class="cart__info-block block d-spacebeetwen">
+                            <div class="block__text">
+                                <h4 class="block__text-title">
+                                    The Post Grid Pro
+                                </h4>
+                                <p class="block__text-category">
+                                    WordPress Plugin
+                                </p>
+                            </div>
+                            <p class="block__price">$19</p>
+                        </div>
+                        <div class="cart__theme theme d-spacebeetwen">
+                            <a href="#" class="theme__author-link ">
+                                <img src="images/user_avatar/test_avatar.jpg" alt="author"
+                                    class="theme__author-link--img">
+                                <span class="theme__author-link--name">Raklouse</span>
+                            </a>
+                            <div class="theme__raiting">
+                                <div class="my-rating"><span class="theme__reviews">(05)</span></div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                    <!--Карточка #7-->
+                    <article class="cart__info cart__info--top" data-cat:="Illsatration star">
+                        <div class="popular">
+                            <svg class="bolt">
+                                <use xlink: href="images/svg/stack/sprite.svg#bolt1"></use>
+                            </svg>
+                        </div>
+                        <a href="#" class="cart__info-link">
+                            <img src="images/products images/products__image_7.jpg" alt="Doll Face"
+                                class="cart__info-image">
+                        </a>
+                        <div class="cart__info-block block d-spacebeetwen">
+                            <div class="block__text">
+                                <h4 class="block__text-title">
+                                    Doll Face
+                                </h4>
+                                <p class="block__text-category">
+                                    Illsatration
+                                </p>
+                            </div>
+                            <p class="block__price">$10</p>
+                        </div>
+                        <div class="cart__theme theme d-spacebeetwen">
+                            <a href="#" class="theme__author-link ">
+                                <img src="images/user_avatar/test_avatar.jpg" alt="author"
+                                    class="theme__author-link--img">
+                                <span class="theme__author-link--name">Mikc Art</span>
+                            </a>
+                            <div class="theme__raiting">
+                                <div class="my-rating"><span class="theme__reviews">(05)</span></div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                    <!--Карточка #8-->
+                    <article class="cart__info cart__info--top" data-cat:="PsdTemplate">
+                        <a href="#" class="cart__info-link">
+                            <img src="images/products images/products__image_8.jpg" alt="Designer Mockup"
+                                class="cart__info-image">
+                        </a>
+                        <div class="cart__info-block block d-spacebeetwen">
+                            <div class="block__text">
+                                <h4 class="block__text-title">
+                                    Designer Mockup
+                                </h4>
+                                <p class="block__text-category">
+                                    Psd Template
+                                </p>
+                            </div>
+                            <p class="block__price">$10</p>
+                        </div>
+                        <div class="cart__theme theme d-spacebeetwen">
+                            <a href="#" class="theme__author-link ">
+                                <img src="images/user_avatar/test_avatar.jpg" alt="" class="theme__author-link--img">
+                                <span class="theme__author-link--name">ThemeLol</span>
+                            </a>
+                            <div class="theme__raiting">
+                                <div class="my-rating"><span class="theme__reviews">(05)</span></div>
+                            </div>
+
+                        </div>
+
+                    </article>
                 </div>
+                <ul class="products__category j-center">
+                    <li class="products__category-item">
+                        <a href="" class="products__category-link link--active">All New Items</a>
+                    </li>
+                    <li class="products__category-item">
+                        <a href="" class="products__category-link " data-filter="star">Popular Items</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="trend">
+            <div class="container--fluid">
+                <h2 class="products__title title--h2">
+                    This Week Trending Products
+                </h2>
             </div>
         </section>
     </main>

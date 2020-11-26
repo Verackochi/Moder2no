@@ -135,7 +135,7 @@
         
         
 
-        &-title, {
+        &-title {
             font-family: "Roboto";
             font-weight: 700;
             font-size: 48px;
@@ -179,6 +179,13 @@
 .products {
     padding: 121px 0 123px;
     background-color: $bg-light;
+    
+    &__cart {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: 100%;
+    }
 }
 
 .title--h2 {
@@ -212,9 +219,11 @@
     
 }
 
-.cart {
+
+
+.cart__info {
+    widows: 442px;
     margin-top: 59px;
-    width: 442px;
     font-family: "Roboto";
     font-weight: 500;
     color: $black;
@@ -223,7 +232,7 @@
     border-color: $border-color;
     border-width: 0 1px 1px 1px;
 
-    &__info:hover {
+    &:hover {
         box-shadow: 0px 16px 20px 0 rgba(216, 216, 216, 0.75);
     }
 
@@ -231,6 +240,28 @@
         width: 442px;
         height: 250px;
     }
+}
+
+.hide {
+    display: none;
+}
+
+.popular {
+  width: 63px;
+  height: 64px;
+  border-top: 100px solid $light-green;
+  border-right: 100px solid transparent;
+  position: absolute;
+  
+}
+
+.bolt {
+    fill: #fff;
+    width: 18px;
+    height: 36px;
+    position: relative;
+    bottom: 86px;
+    left: 14px;
 }
 
 .block {
