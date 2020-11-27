@@ -182,7 +182,6 @@
     
     &__cart {
         display: flex;
-        align-items: flex-start;
         flex-wrap: wrap;
         height: 100%;
     }
@@ -202,14 +201,15 @@
     
     &-link {
         margin-left: 6px;
-        width: 70px;
-        height: 37px;
-        padding: 13px 27px;
+        padding: 13px 20px;
         box-shadow: 0px 2px 5px 0 rgba(202, 215, 228, 0.75);
         background-color: #fff;
         font-family: "Roboto";
         font-weight: 500;
         color: $black;
+        border: 0;
+        outline: none;
+        border-radius: 0;
     }
 
     &-link:hover, &-link:active {
@@ -224,6 +224,7 @@
 .cart__info {
     widows: 442px;
     margin-top: 59px;
+    margin-right: 16px;
     font-family: "Roboto";
     font-weight: 500;
     color: $black;
@@ -231,6 +232,7 @@
     border-style:  solid;
     border-color: $border-color;
     border-width: 0 1px 1px 1px;
+    transition: 0.5s all;
 
     &:hover {
         box-shadow: 0px 16px 20px 0 rgba(216, 216, 216, 0.75);
@@ -242,8 +244,33 @@
     }
 }
 
+.card__info:last-child {
+    margin-right: 0;
+}
+
 .hide {
-    display: none;
+    animation-name: hide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.anime {
+    transform: scale(0);
+    opacity: 0;
+}
+
+@keyframes hide {
+    0% {
+         visibility: visible;
+        height: 200px;
+    }
+    100%{
+       height: 0;
+       width: 0;
+       max-width: 0;
+       font-size: 0;
+       margin: 0;
+    }
 }
 
 .popular {

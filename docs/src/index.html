@@ -3,85 +3,12 @@
 
 <!--head-->
 
-<!--header-->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--название свйта-->
-    <title>Moderno</title>
-    <!--мини логотип сайта-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!--доб библиотеки-->
-    <link rel="stylesheet" href="css/lib.min.css">
-    <!--стили страницы-->
-    <link rel="stylesheet" href="css/main.min.css">
-</head>
+@@include('html/_head.html')
 
 <body>
 
     <!--header-->
-    <!--Шапка Сайта-->
-<header class="header">
-    <!--Размер страницы-->
-    <div class="container">
-        <div class="header__top top d-spacebeetwen">
-            <!--блок с логотипом-->
-            <div class="logo">
-                <!--Изображение логотипа-->
-                <img src="images/logo.png" alt="Moderno" class="logo__image" id="logo__image">
-            </div>
-            <div class="top__text">
-                <a href="" class="top__text-link">Need help?</a> Talk to an expert:
-                <a class="top__text-phone" href="tel:61383766284">+61 3 8376 6284</a>
-            </div>
-            <div class="top__btn">
-                <a href="" class="top__btn-link--cart"></a>
-                <div class="top__btn-check check">
-                    <a href="#" class="check__link--login">Login</a>
-                    <a href="#" class="check__link--registet">Registet</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--меню-->
-    <nav class="header__menu menu">
-        <div class="container">
-            <ul class="menu__list">
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">Home</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">About</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">WordPress</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">Joomla</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">PSD</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">Plugins</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">Components</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">Pages</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">Contact</a>
-                </li>
-                <li class="menu__list-item">
-                    <a href="#" class="menu__list-link">Help</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    @@include('html/_header.html')
 
     <!--other site elements-->
 
@@ -118,28 +45,28 @@
                 <ul class="products__category j-center">
                     <!--ссылка на категория-->
                     <li class="products__category-item">
-                        <a href="" class="products__category-link link--active" data-filter="all">All</a>
+                        <button  class="products__category-link link--active" data-filter="all">All</button>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link " data-filter="WordPressPlugin">WordPress</a>
+                        <button href="#" class="products__category-link " data-filter="WordPressPlugin">WordPress</button>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link " data-filter="JoomlaPlugin">Joomla</a>
+                        <button href="#" class="products__category-link " data-filter="JoomlaPlugin">Joomla</button>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link ">Plugins</a>
+                        <button href="#" class="products__category-link ">Plugins</button>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link ">Component</a>
+                        <button href="#" class="products__category-link ">Component</button>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link ">PSD</a>
+                        <button  class="products__category-link ">PSD</button>
                     </li>
                 </ul>
-                <div class="products__cart cart d-spacebeetwen">
+                <div class="products__cart cart ">
                     <!--Карточка товара data-cat:"метка категории"-->
                     <!--карточка #1-->
-                    <article class="cart__info cart__info--top" data-cat:="SiteTemplate">
+                    <article class="cart__info cart__info--top SiteTemplate">
                         <a href="#" class="cart__info-link">
                             <img src="images/products images/products__image_1.jpg" alt="Responsive Mobile APP"
                                 class="cart__info-image">
@@ -170,7 +97,7 @@
 
                     </article>
                     <!--карточка #2-->
-                    <article class="cart__info cart__info--top" data-cat:="WordPressPlugin">
+                    <article class="cart__info cart__info--top WordPressPlugin star">
                         <!--блок с svg обозначает топовые карточки-->
                         <div class="popular">
                             <svg class="bolt">
@@ -206,7 +133,7 @@
                         </div>
                     </article>
                     <!--карточка #3-->
-                    <article class="cart__info cart__info--top" data-cat:="WordPressPlugin">
+                    <article class="cart__info cart__info--top WordPressPlugin ">
                         <a href="#" class="cart__info-link">
                             <img src="images/products images/products__image_3.jpg" alt="Responsive Mobile APP"
                                 class="cart__info-image">
@@ -363,7 +290,7 @@
 
                     </article>
                     <!--Карточка #8-->
-                    <article class="cart__info cart__info--top" data-cat:="PsdTemplate">
+                    <article class="cart__info cart__info--top PsdTemplate new star">
                         <a href="#" class="cart__info-link">
                             <img src="images/products images/products__image_8.jpg" alt="Designer Mockup"
                                 class="cart__info-image">
@@ -394,10 +321,10 @@
                 </div>
                 <ul class="products__category j-center">
                     <li class="products__category-item">
-                        <a href="" class="products__category-link link--active">All New Items</a>
+                        <button class="products__category-link link--active" data-filter="new">All New Items</button>
                     </li>
                     <li class="products__category-item">
-                        <a href="" class="products__category-link " data-filter="star">Popular Items</a>
+                        <button class="products__category-link " data-filter="star">Popular Items</button>
                     </li>
                 </ul>
             </div>
@@ -413,13 +340,10 @@
 
 
     <!--footer-->
-    <footer class="footer" id="footer"></footer>
+    @@include('html/_footer.html')
 
     <!--JS script-->
-    <!--библиотеки-->
-<script src="js/lib.min.js"></script>
-<script src="js/main.js"></script>
-
+    @@include('html/_scripts.html')
 </body>
 
 </html>
