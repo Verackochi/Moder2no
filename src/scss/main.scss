@@ -2,7 +2,7 @@
 @import "global.scss";
 @import "fonts.scss";
 
-.body {
+body {
     color: $black;
     font-family: "Roboto";
     font-weight: 400;
@@ -399,8 +399,9 @@
     font-size: 0;
     width: 16px;
     height: 16px;
-    box-shadow: inset 1px rgba(154, 147, 140, 0.5);
+    border: none;
     border-radius: 50%;
+    box-shadow: inset 1px rgba(154, 147, 140, 0.5);
 }
 
 .differences {
@@ -463,10 +464,11 @@
     background-color: $light-green;
     color: #fff;
     font-size: 30px;
+    align-items:center;
 }
 
 .people__block-text {
-    width: 260px;
+    width: 270px;
 }
 
 .people__block-text--bold {
@@ -503,6 +505,7 @@
 .item__tutorial-block {
     width: 370px;
     background-color: #f8f8f8;
+    color: $black;
 }
 
 .tutorials__list-image {
@@ -543,6 +546,7 @@
 
 .about__title:after,
 .community__title:after,
+.help__title:after,
 .follow__title:after {
     content: "";
     width: 51px;
@@ -634,9 +638,11 @@
 }
 
 .linkedin, .pinterest, .youtube, .twitter, .facebook {
+    display: block;
     width: 28px;
     height: 28px;
     background-color: #fff;
+    
 }
 
 .facebook {
@@ -735,6 +741,7 @@
     &__text {
         display: block;
         margin:  27px 0 auto;
+        text-align: center;
         
     }
 }

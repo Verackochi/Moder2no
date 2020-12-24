@@ -23,6 +23,11 @@ const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 
+const noSvgSprites = () => {
+    return src('./src/icon/*.svg')
+    .pipe(dest('./app/icon'))
+};
+
 const styles = () => {
     return src('./src/scss/**/*.scss')
         .pipe(sourcemaps.init())
@@ -42,6 +47,7 @@ const styles = () => {
         .pipe(dest('./app/css/'))
         .pipe(browserSync.stream());
 };
+
 
 const libCSS = () => {
 return src(['./node_modules/normalize.css/normalize.css', './node_modules/slick-carousel/slick/slick.css', './node_modules/slick-carousel/slick/slick.js', /*'./node_modules/rateyo/lib/es/rateyo.css'*/ './node_modules/star-rating-svg2/src/css/star-rating-svg.css'])
@@ -158,6 +164,7 @@ watch('./src/images/**.jpg', imgTooApp);
 watch('./src/images/**.jpeg', imgTooApp);
 watch('./src/images/**.png', imgTooApp);
 watch('./src/svg/**.svg', svgSprites);
+watch('./src/icon/**.svg', noSvgSprites);
 watch('./src/resources/**', resources);
 watch('./src/font/**.ttf', fonts);
 watch('./src/js/**/*.js', scripts);
@@ -168,7 +175,7 @@ exports.styles = styles;
 exports.watchFiles = watchFiles;
 exports.fileinclude = fileinclude;
 
-exports.default = series(clean, parallel(htmlInclude, libCSS, libJS, fonts, scripts, resources, imgTooApp, svgSprites), styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, libCSS, libJS, noSvgSprites, fonts, scripts, resources, imgTooApp, svgSprites), styles, watchFiles);
 
 
 const stylesBuild = () => {
@@ -227,4 +234,4 @@ const imageCompresors = () => {
     .pipe(dest('./app/img'))
 };
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgTooApp, svgSprites), stylesBuild, imageCompresors);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, noSvgSprites, imgTooApp, svgSprites), stylesBuild, imageCompresors);
